@@ -76,7 +76,7 @@
 
 <data noupdate="1">
     <record id="menu_crm_lead_page" model="website.menu">
-        <field name="name">Lead</field>
+        <field name="name">Inquiry</field>
         <field name="url">/crm_lead</field>
         <!-- <field name="page_id" ref="website_practice_module.contact"/> -->
         <field name="parent_id" ref="website.main_menu"/>
