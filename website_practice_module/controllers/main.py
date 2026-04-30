@@ -4,11 +4,11 @@ from odoo.http import request
 
 class WebsiteContact(http.Controller):
 
-    @http.route('/crm_lead', type='http', auth='user', website=True)
+    @http.route('/crm_lead', type='http', auth='public', website=True)
     def create_crmlead(self, **kw):
         return request.render('website_practice_module.crm_lead')
 
-    @http.route('/crm_lead/submit', type='http', auth='user', website=True, method=['POST'], csrf=False)
+    @http.route('/crm_lead/submit', type='http', auth='public', website=True, method=['POST'], csrf=False)
     def create_crm_button_method(self, **post):
 
         request.env['crm.lead'].sudo().create({
@@ -23,12 +23,12 @@ class WebsiteContact(http.Controller):
         return request.render('website_practice_module.crm_lead')
 
 
-    @http.route('/customer', type='http', auth='user', website=True)
+    @http.route('/customer', type='http', auth='public', website=True)
     def create_contacts(self, **kw):
         return request.render('website_practice_module.contact')
 
 
-    @http.route('/contactform/submit', type='http', auth='user', website=True, method=['POST'], csrf=False)
+    @http.route('/contactform/submit', type='http', auth='public', website=True, method=['POST'], csrf=False)
     def create_button_method(self, **post):
 
         email = post.get('email')
