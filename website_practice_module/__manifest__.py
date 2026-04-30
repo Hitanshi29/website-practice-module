@@ -11,7 +11,7 @@
     'depends': ['crm','website'],
     'data': [
         'views/website_contact.xml',
-        # 'views/website_crm_lead.xml',
+        'views/website_crm_lead.xml',
     ],
     'assets': {
         'web.assets_frontend': [

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="crm_lead" name="crm_lead">
+    <t t-call="website.layout">
+        <div class="container mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card shadow p-4">
+                        <h2 class="text-center mb-4">Inquiry</h2>
+
+                        <form action="/crm_lead/submit" method="POST" enctype="multipart/form-data">
+
+                            <!-- <input type="hidden" name="type" value="opportunity"/> -->
+                            
+                            <div class="mb-3">
+                                <label for="contact_name" class="form-label">
+                                    Name <span class="text-danger">*</span>
+                                </label>
+                                <input id="contact_name" type="text" class="form-control" name="contact_name" required="1"/>
+                            </div>
+
+                           
+                            <div class="mb-3">
+                                <label for="email_from" class="form-label">
+                                    Email <span class="text-danger">*</span>
+                                </label>
+                                <input id="email_from" type="email" class="form-control" name="email_from" required="1"></input>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Phone <span class="text-danger">*</span>
+                                </label>
+                                <input id="phone" type="text" class="form-control" name="phone" required="1"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="partner_name" class="form-label">
+                                    Company name <span class="text-danger">*</span>
+                                </label>
+                                <input id="partner_name" type="text" class="form-control" name="partner_name" required="1"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Subject <span class="text-danger">*</span>
+                                </label>
+                                <input id="name" type="text" class="form-control" name="name" required="1"/>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Decription <span class="text-danger">*</span>
+                                </label>
+                                <textarea id="description" type="text" class="form-control" name="description" required="1"></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    Submit
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+
+<data noupdate="1">
+    <record id="menu_crm_lead_page" model="website.menu">
+        <field name="name">Lead</field>
+        <field name="url">/crm_lead</field>
+        <!-- <field name="page_id" ref="website_practice_module.contact"/> -->
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+</data>
+
+</odoo>
