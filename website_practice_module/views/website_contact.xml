@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="contact">
+    <t t-call="website.layout">
+        <div class="container mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card shadow p-4">
+                        <h2 class="text-center mb-4">Contact Form</h2>
+
+                        <form action="/contactform/submit" method="POST" enctype="multipart/form-data">
+
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Name <span class="text-danger">*</span>
+                                </label>
+                                <input id="name" type="text" class="form-control" name="name" required="1"/>
+                            </div>
+
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Phone <span class="text-danger">*</span>
+                                </label>
+                                <input id="phone" type="text" class="form-control" name="phone" required="1"/>
+                            </div>
+
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email <span class="text-danger">*</span>
+                                </label>
+                                <input id="email" type="email" class="form-control" name="email" required="1"/>
+                            </div>
+
+                           
+                            <div class="mb-3">
+                                <label for="address" class="form-label">
+                                    Address <span class="text-danger">*</span>
+                                </label>
+                                <textarea id="address" class="form-control" name="street" required="1"></textarea>
+                            </div>
+
+                            
+                            <div class="mb-3">
+                                <label for="dob" class="form-label">
+                                    Date of Birth <span class="text-danger">*</span>
+                                </label>
+                                <input id="dob" type="date" class="form-control" name="birthday" required="1"/>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    Submit
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+</odoo>

@@ -10,6 +10,7 @@
     'summary': '',
     'depends': ['crm','website'],
     'data': [
+        'views/website_contact.xml',
     ],
     'sequence' : 1,
     'installable': True,
