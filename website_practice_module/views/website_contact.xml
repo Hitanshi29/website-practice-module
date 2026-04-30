@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<template id="contact">
+<template id="contact" name="contact">
     <t t-call="website.layout">
         <div class="container mt-5 mb-5">
             <div class="row justify-content-center">
@@ -66,5 +66,15 @@
         </div>
     </t>
 </template>
+
+
+<data noupdate="1">
+    <record id="menu_my_custom_page" model="website.menu">
+        <field name="name">Contact</field>
+        <field name="url">/customer</field>
+        <!-- <field name="page_id" ref="website_practice_module.contact"/> -->
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+</data>
 
 </odoo>

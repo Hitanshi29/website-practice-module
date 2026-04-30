@@ -11,7 +11,13 @@
     'depends': ['crm','website'],
     'data': [
         'views/website_contact.xml',
+        # 'views/website_crm_lead.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            'website_practice_module/static/src/js/email_check.js',
+        ],
+    },
     'sequence' : 1,
     'installable': True,
     'application': True,
