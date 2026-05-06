@@ -50,8 +50,6 @@ class WebsiteContact(http.Controller):
         return request.render('website_practice_module.contact')
 
 
-
-
     # @http.route('/check_email', type='json', auth='public', website=True)
     # def check_email(self, email):
     #     partner = request.env['res.partner'].sudo().search([

@@ -81,6 +81,8 @@
         <!-- <field name="page_id" ref="website_practice_module.contact"/> -->
         <field name="parent_id" ref="website.main_menu"/>
     </record>
+
 </data>
+
 
 </odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="action_product_brand" model="ir.actions.act_window">
+        <field name="name">Brand</field>
+        <field name="res_model">product.brand</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem 
+        id="menu_bizople_theme" 
+        name="Bizople Theme"
+        groups="base.group_user,website.group_website_designer"
+        parent="website.menu_website_configuration"/>
+
+    <menuitem 
+        id="menu_brand" 
+        name="Brand" 
+        parent="menu_bizople_theme"
+        action="action_product_brand"/>
+    
+</odoo>
